@@ -1,0 +1,45 @@
+@import "bootstrap-reboot";
+@import "bootstrap-grid";
+@import "variaveis";
+@import "header";
+@import "section";
+@import "footer";
+@import "responsividade";
+h1 {
+  @include titulo-1(32);
+}
+h2 {
+  @include titulo-2(28);
+}
+p {
+  @include paragrafo(22);
+}
+.externo {
+  color: #ff006f;
+  &:hover {
+    text-decoration: none;
+    color: #00ff90;
+  }
+}
+#menu-mobile {
+  background: #f0ecec;
+  padding: 5px;
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  transition: height 1s, opacity 1.5s;
+}
+.menu-mobile {
+  opacity: 0%;
+  height: 0px;
+  a {
+    display: none;
+  }
+}
+.bruno {
+  height: 320px;
+  opacity: 100%;
+  a {
+    display: block;
+  }
+}

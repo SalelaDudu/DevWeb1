@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../assets/imagens/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allerta&family=Heebo:wght@300&family=Roboto+Mono&family=Signika+Negative&display=swap" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <title>Apoie</title>
+</head>
+
+<body>
+  <header class="fluid-container">
+    <div id="menu">
+      <nav id="nav-comum">
+        <a href="../index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+        <a id="aqui" href="Apoie.html">Apoie</a>
+        <button id="menu-burguer">
+          <p>&#9776; </p>
+        </button>
+      </nav>
+      <nav id="menu-mobile" class="menu-mobile">
+        <a href="../index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+        <a id="aqui" href="Apoie.html">Apoie</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="container">
+    <div class="row">
+      <div class="col-md-2">
+      </div>
+      <div class="col-md-8 container principal">
+        <div class="" id="main-content">
+          <h1>
+            Como Apoiar Ednaldo Pereira?
+          </h1>
+          <p>
+            Atualmente Existem duas principais maneiras de apoiar o trabalho de Ednaldo Pereira. A primeira é através do <a href="https://apoia.se/ednaldopereira" target="_blank" class="externo">apoia.se</a>, uma plataforma de <a href="https://pt.wikipedia.org/wiki/Financiamento_coletivo" target="_blank" class="externo">crowdfunding</a> aonde você pode escolher com que quantia deseja ajudar Ednaldo além de ter algumas recompensas dependendo da quantia selecionada. E a segunda é através da <a href="https://t.co/M2dj8xQTXI" target="_blank" class="externo">Lolja</a>, um <a class="externo" href="https://pt.wikipedia.org/wiki/Com%C3%A9rcio_eletr%C3%B4nico" target="_blank">e-commerce</a> pelo qual é possível adquirir camisetas e moletons com estampas exclusivas do Ednaldo Pereira.
+          </p>
+          <h2 id="sub-titulo"> Destaques da Semana</h2>
+          <div class="carrousel">
+            <!-- Elementos das imagens -->
+            <div class="slides fade">
+              <img alt="camiseta-brother-preta" src="../assets/imagens/c1.png">
+            </div>
+            <div class="slides fade">
+              <img alt="Moletom Preto Junjinaldo" src="../assets/imagens/m1.png">
+            </div>
+            <div class="slides fade">
+              <img alt="Camisão preto Brother" src="../assets/imagens/cs1.png">
+            </div>
+            <!-- Botão de próximo e anterior -->
+            <a class="botao-posi anterior" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="botao-posi proximo" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+          <!-- Bolinhas de Identificação -->
+          <div style="text-align:center">
+            <span class="bolinha" onclick="currentSlide(1)"></span>
+            <span class="bolinha" onclick="currentSlide(2)"></span>
+            <span class="bolinha" onclick="currentSlide(3)"></span>
+          </div>
+          <div class="row" id="apoio">
+            <div class="col-md-6 meio-de-apoiar">
+              <a href="https://apoia.se/ednaldopereira" target="_blank"><img alt="apoia.se logo" src="../assets/imagens/apoia.se.png"></a>
+            </div>
+            <div class="col-md-6 meio-de-apoiar">
+              <a href="https://t.co/M2dj8xQTXI" target="_blank"><img alt="lolja logo" src="../assets/imagens/lolja.png"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Direitos Reservados ©
+  </footer>
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("slides");
+      let dots = document.getElementsByClassName("bolinha");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+
+
+</html>

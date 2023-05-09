@@ -1,0 +1,42 @@
+// Cores
+$cor-header: #ffffff;
+$cor-hover-botoes: #d9d7d7;
+$cor-background: #b5aeae14;
+$cor-produtos: rgb(55, 88, 10);
+// Tipografia
+@mixin fonte-header($size) {
+  font-family: "Roboto Mono", monospace;
+  font-size: $size + px;
+  @if ($size <= 20) {
+    line-height: $size + 2px;
+  } @else if ($size > 20) {
+    line-height: $size + 6px;
+  }
+}
+@mixin titulo-1($size) {
+  font-family: "Signika Negative", sans-serif;
+  font-size: $size + px;
+  @if ($size <= 20) {
+    line-height: $size + 2px;
+  } @else if ($size > 20) {
+    line-height: $size + 6px;
+  }
+}
+@mixin titulo-2($size) {
+  font-family: "Allerta", sans-serif;
+  font-size: $size + px;
+  @if ($size <= 20) {
+    line-height: $size + 2px;
+  } @else if ($size > 20) {
+    line-height: $size + 6px;
+  }
+}
+@mixin paragrafo($size) {
+  font-family: "Heebo", sans-serif;
+  font-size: $size + px;
+  @if ($size <= 20) {
+    line-height: $size + 2px;
+  } @else if ($size > 20) {
+    line-height: $size + 6px;
+  }
+}
